@@ -8,7 +8,7 @@ namespace FizzBuzzKata
     public class FizzBuzzSpec
     {
         [TestMethod]
-        public void Number_Returns_Result_Using_DefaultSubsitutions()
+        public void Number_Returns_Result_Using_DefaultPreferences()
         {
             Assert.AreEqual("", new FizzBuzzGame().Convert(0));
             Assert.AreEqual("1", new FizzBuzzGame().Convert(1));
@@ -43,6 +43,7 @@ namespace FizzBuzzKata
     {
         private static readonly Dictionary<int, string> _defaultLookup = new Dictionary<int, string>
         {
+            //{ 0, "" },
             { 3, "Fizz" },
             { 5, "Buzz" },
             { 7, "Pop" }
